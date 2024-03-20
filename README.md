@@ -3,7 +3,7 @@
 > [!WARNING]
 > This extension is just a prerelease so expect bugs
 
-> [!INFO]
+> [!NOTE]
 > This extension uses VScode's built in github auth system uses the 'gist' scope. Although read access is not used Simple Gist has both read/white access. Please consult your Org before installing
 
 Quickly create gists with a context menu action
