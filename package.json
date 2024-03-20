@@ -1,0 +1,74 @@
+{
+  "name": "simple-gist",
+  "displayName": "Simple Gist",
+  "publisher": "ArcticWarmth",
+  "description": "Quickly upload files to github's gist service",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.87.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "preview": true,
+  "activationEvents": [],
+  "main": "./extension.js",
+  "repository": "https://github.com/ArcticWarmth/simple-gist",
+  "contributes": {
+    
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "simple-gist.upload",
+          "when": "editorTextFocus"
+        },
+        {
+          "command": "simple-gist.secret-upload",
+          "when": "editorTextFocus"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "simple-gist.upload",
+          "when": "resourceScheme == file",
+          "group": "5_cutcopypaste@999"
+        },
+        {
+          "command": "simple-gist.secret-upload",
+          "when": "resourceScheme == file",
+          "group": "5_cutcopypaste@999"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "simple-gist.upload",
+        "title": "Quick Gist: Create Gist from file"
+      },
+      {
+        "command": "simple-gist.secret-upload",
+        "title": "Quick Gist: Create Secret Gist from file"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js",
+    "build": "vsce package"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.82.0",
+    "@vscode/test-electron": "^2.3.4",
+    "eslint": "^8.47.0",
+    "glob": "^10.3.3",
+    "mocha": "^10.2.0",
+    "sinon": "^16.0.0",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
