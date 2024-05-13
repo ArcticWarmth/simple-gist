@@ -52,7 +52,7 @@ async function generateGistData(fileUri, secret) {
 			const filename = vscode.workspace.asRelativePath(fileUri);
 		
 			//File content
-		
+
 			const contentAsBytes = await vscode.workspace.fs.readFile(fileUri);
 			const content = contentAsBytes.toString();
 
@@ -97,7 +97,7 @@ async function createGist(token, filename, content, secret) {
                     content: content,
                 },
             },
-			public: secret,
+			public: !secret,
         }),
     });
 
