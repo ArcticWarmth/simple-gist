@@ -1,7 +1,7 @@
 # Simple Gist
 
-> [!WARNING]
-> This extension is just a prerelease so expect bugs
+> [!CAUTION]
+> This extension is now **DEPRECATED** and may not function. This repo will be archived on 1/1/2026
 
 > [!NOTE]
 > This extension uses VScode's built in github auth system uses the 'gist' scope. Although read access is not used Simple Gist has both read/white access. Please consult your Org before installing
